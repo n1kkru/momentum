@@ -1,0 +1,8 @@
+.nav {
+  background-color: inherit;
+  color: #fff;
+  padding-inline: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
