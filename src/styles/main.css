@@ -1,3 +1,21 @@
-.main {
-  background-color: #fff;
+.main__date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  max-height: 500px;
+  text-shadow: rgb(0, 0, 0) 2px 5px;;
+  color: #fff;
+  font-size: 36px;
+}
+
+.main__date:nth-child(1) {
+  position: relative;
+  z-index: 10;
+}
+
+.main__date-time {
+  font-size: 50px;
+
 }

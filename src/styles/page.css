@@ -12,4 +12,18 @@
   background-image: url(../../images/04.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.page__content::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  margin: auto;
+  min-width: 100%;
+  min-height: 100%;
+  
+  border-radius: 30px;
+  background-color: rgba(0,0,0, 0.35); 
+
 }
