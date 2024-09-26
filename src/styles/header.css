@@ -1,16 +1,16 @@
 .nav {
-  background-color: inherit;
-  color: #fff;
-  padding: 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  background-color: inherit;
 }
 
 .nav__element {
-  font-size: 16px;
   color: #fff;
   font-family: sans-serif;
+  font-size: 16px;
 }
 
 .tasks {
@@ -18,14 +18,42 @@
   flex-direction: column;
   align-items: center;
   gap: 5px;
-  background-color: unset;
   border: none;
+  background-color: unset;
   cursor: pointer;
 }
 
-.icon_tasks {
-  color: #fff;
+.nav__element-icon {
   width: 30px;
   height: 30px;
+  color: #fff;
+}
+
+.icon_tasks {
   background-image: url(../../images/task.svg);
+}
+
+.weather {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 6px;
+  grid-template-areas:
+      ". ."
+      "city city";
+  align-items: end;
+}
+
+.nav__element-temperature {
+  font-size: 24px;
+}
+
+.city { 
+  align-self: center;
+  justify-self: center;
+  grid-area: city;
+}
+
+.icon_weather {
+  background-image: url(../../images/sunny.svg);
 }
