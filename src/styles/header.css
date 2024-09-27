@@ -57,6 +57,7 @@
   align-self: center;
   justify-self: center;
   grid-area: city;
+  cursor: pointer;
 }
 
 .icon_weather {
