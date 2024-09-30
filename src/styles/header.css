@@ -59,7 +59,3 @@
   grid-area: city;
   cursor: pointer;
 }
-
-.icon_weather {
-  background-image: url(../../images/sunny.svg);
-}

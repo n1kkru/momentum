@@ -21,3 +21,6 @@ const checkResponse = (res) => {
 	return Promise.reject(`Ошибка: ${res.status}`);
 }
 
+
+
+
