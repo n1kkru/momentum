@@ -67,11 +67,48 @@ function changeWeatherIcon(weather_cod) {
   iconWeather.append(weatherTemplate);
 }
 
+function transferMonth(value) {
+  const monthList = [
+    "января",
+    "февраля",
+    "марта",
+    "апреля",
+    "мая",
+    "июня",
+    "июля",
+    "августа",
+    "сентября",
+    "октября",
+    "ноября",
+    "декабря",
+  ];
+  return monthList[value]
+}
+
+function transferDayOfWeek(value) {
+  const daysList = [
+    "воскресенье",
+    "понедельник",
+    "вторник",
+    "среда",
+    "четверг",
+    "пятница",
+    "суббота"
+  ];
+  return daysList[value]
+  
+}
 
 function updateDate() {
   const date = new Date();
-  
-  dateValue.textContent = date.getFullYear();
+  const day = date.getDate();
+  const month = transferMonth(date.getMonth());
+  const dayOfWeek = transferDayOfWeek(date.getDay());
+
+  dateValue.textContent = `${day} ${month}, ${dayOfWeek}`;
+  timeValue.textContent = date.toTimeString().slice(0,8);
+  setTimeout(function(){updateDate()}, 1000);
 }
 
-setTimeout(updateDate, 1000);
+setTimeout(updateDate(), 1000);
+
