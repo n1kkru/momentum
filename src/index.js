@@ -1,16 +1,25 @@
 import { fetchWeather } from "./api";
 import "./index.css";
 import { changeWeatherIcon } from "./scripts/date";
+import { closeByClick, closeModal, openModal } from "./scripts/modal";
 import { transferDayOfWeek, transferMonth } from "./scripts/time";
+import { createTodo, deleteElement } from "./scripts/todo";
 
 // DOM
 const mainDate = document.querySelector(".main__date");
 const dateValue = mainDate.querySelector(".main__date-date");
 const timeValue = mainDate.querySelector(".main__date-time");
+
 const buttonTasks = document.querySelector(".button-tasks");
 const iconWeather = document.querySelector(".icon_weather");
 const temperatureValue = document.querySelector(".nav__element-temperature");
 const city = document.querySelector(".city");
+
+const todosList = document.querySelector('.todos__list');
+const popupTodos = document.querySelector('.popup_type_todo');
+const formAddTodo = document.forms['new-todo'];
+const newTodoName = formAddTodo.elements['todo-name'];
+
 
 findLocation();
 setDefaultValues();
@@ -32,6 +41,19 @@ city.addEventListener("click", () => {
 
 setTimeout(updateDate(), 1000);
 
+buttonTasks.addEventListener('click', () => {
+  openModal(popupTodos);
+})
+
+popupTodos.addEventListener('click', closeByClick);
+
+formAddTodo.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  const newElem = createTodo(newTodoName.value, deleteElement);
+  todosList.prepend(newElem, todosList.firstChild);
+  todosList.prepend(newElem);
+  newTodoName.value = "";
+});
 
 function findLocation() {
   if (!navigator.geolocation) {

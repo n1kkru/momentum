@@ -35,8 +35,45 @@
         </section>
       </main>
 
-      <footer></footer>
+      <!-- Модалка туду -->
+    <div id="popup_type_todo" class="popup popup_type_todo">
+      <div class="popup__content">
+        <button type="button" class="popup__close">X</button>
+        <h3 class="popup__title">Задачи</h3>
+        <form class="popup__form" name="new-todo">
+          <input 
+            type="text"
+            name="todo-name"
+            id="todo-name-input"
+            class="popup__input popup__input_type_todo-name"
+            placeholder="новая задача"
+            required
+            minlength="2"
+            pattern="^[A-Za-zА-Яа-яёЁ \-]+$"
+            data-error-message="Разрешены только буквы, знак дефиса и пробел"
+          >
+          <button type="submit" class="button popup__button">Добавить</button>
+        </form>
+        <span class="popup__message-error place-name-input-error popup__message-error-activ"></span>
+        <ul class="todos__list">
+          <li class="todos__item todo">
+            <input class="todo__checkbox" type="checkbox">
+            <h2 class="todo__title">Удаление задач</h2>
+            <button type="button" class="todo__delete-button">X</button>
+          </li>
+        </ul>
+      </div>
     </div>
+    </div>
+
+<!-- шаблон тудухи -->
+    <template id="todo-template">
+      <li class="todos__item todo">
+        <input class="todo__checkbox" type="checkbox">
+        <h2 class="todo__title"></h2>
+        <button type="button" class="todo__delete-button">X</button>
+      </li>
+    </template>
 
     <template id="sunny">
       <svg width="30px" height="30px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000">

@@ -1,0 +1,122 @@
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+}
+
+.popup__content {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 430px;
+  min-height: 330px;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.popup_is-opened {
+  visibility: visible;
+  display: flex;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.6s;
+  pointer-events: all;
+}
+
+.popup__close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-size: 35px 35px;
+  transition: visibility 0s, opacity 0.3s;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.popup__close:hover {
+  opacity: 0.6;
+}
+
+.popup__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 50px;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-size: 18px;
+  line-height: 22px;
+  background: #000;
+  transition: visibility 0s, background 0.3s;
+}
+
+.popup__form {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup__button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.popup__input {
+  box-sizing: border-box;
+  width: 55%;
+  height: 47px;
+  margin-bottom: 10px;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  padding: 10px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.todos__list {
+  padding: 0;
+
+}
+
+.todos__item {
+  max-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+input[type="checkbox"] {
+  accent-color: #00fb69;
+  width: 20px;
+  height: 20px;
+}
+
+.todo__delete-button {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.todo__delete-button:hover {
+  background-color: red;
+}
