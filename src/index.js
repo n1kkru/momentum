@@ -108,7 +108,7 @@ function setDefaultValues() {
 
   localStorage.getItem("temperature")
     ? (temperatureValue.textContent = `${localStorage.getItem("temperature")} °C`)
-    : (city.textContent = "25 °C");
+    : (temperatureValue.textContent = "25 °C");
 }
 
 function setBackgroundImage(hours) {
