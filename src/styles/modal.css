@@ -22,6 +22,27 @@
   background-color: #fff;
 }
 
+.popup__title {
+  margin: 0;
+  font-size: 28px;
+  display: inline;
+}
+
+.button-clear {
+  cursor: pointer;
+  padding: 0 0 0 130px ;
+  margin: 0;
+  border: none;
+  background-color: inherit;
+  justify-self: end;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.button-clear:hover {
+  text-decoration: underline;
+}
+
 .popup_is-opened {
   visibility: visible;
   display: flex;
@@ -100,6 +121,10 @@
   gap: 15px;
   text-decoration: none;
   list-style-type: none;
+}
+
+.todo__title {
+  font-size: 20px;
 }
 
 input[type="checkbox"] {
