@@ -349,38 +349,50 @@ template {
 }
 
 .page {
+  display: flex;
   padding: 100px;
   background-color: cadetblue;
-  display: flex;
 }
 
 .page__content {
-  margin-inline: auto;
-  inset-inline: 0;
-  inset-block-start: calc(50% - 500px);
+  position: relative;
   min-width: 500px;
-  min-height: 500px;
   max-width: 800px;
+  min-height: 500px;
+  margin-inline: auto;
   border-radius: 30px;
-  background-image: url(721bd82379d81ac683dc.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  inset-inline: 0;
+  inset-block-start: calc(50% - 500px);
 }
 
 .page__content::after {
-  position: absolute;
   content: "";
+  position: absolute;
   inset: 0;
-  margin: auto;
   min-width: 100%;
   min-height: 100%;
-  
+  margin: auto;
   border-radius: 30px;
-  background-color: rgba(0,0,0, 0.35); 
-
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
+.image_night {
+  background-image: url(20281eaf7f3981226ac7.jpg);
+}
+
+.image_morning {
+  background-image: url(508d0e5e4d7b6dad287b.jpg);
+}
+
+.image_day {
+  background-image: url(9bf9f9292a6b99df332a.jpg);
+}
+
+.image_evening {
+  background-image: url(721bd82379d81ac683dc.jpg);
+}
 .nav {
   display: flex;
   justify-content: space-between;
@@ -488,6 +500,27 @@ template {
   background-color: #fff;
 }
 
+.popup__title {
+  margin: 0;
+  font-size: 28px;
+  display: inline;
+}
+
+.button-clear {
+  cursor: pointer;
+  padding: 0 0 0 130px ;
+  margin: 0;
+  border: none;
+  background-color: inherit;
+  justify-self: end;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.button-clear:hover {
+  text-decoration: underline;
+}
+
 .popup_is-opened {
   visibility: visible;
   display: flex;
@@ -566,6 +599,10 @@ template {
   gap: 15px;
   text-decoration: none;
   list-style-type: none;
+}
+
+.todo__title {
+  font-size: 20px;
 }
 
 input[type="checkbox"] {
